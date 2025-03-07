@@ -1,0 +1,43 @@
+﻿@model ExemploEF.Models.Categoria
+
+@{
+    ViewData["Title"] = "Criar Categoria";
+}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h1 class="fw-bold">Criar Nova Categoria</h1>
+        <p class="text-muted">Preencha o formulário abaixo para adicionar uma nova categoria.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="Nome" class="form-label fw-bold"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary rounded-3">
+                            <i class="bi bi-arrow-left"></i> Voltar
+                        </a>
+                        <button type="submit" class="btn btn-success rounded-3 fw-bold">
+                            <i class="bi bi-check-circle"></i> Criar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

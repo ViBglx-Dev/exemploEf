@@ -1,0 +1,31 @@
+﻿@model ExemploEF.Models.Categoria
+
+@{
+    ViewData["Title"] = "Excluir Categoria";
+}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h1 class="fw-bold text-danger">Excluir Categoria</h1>
+        <p class="text-muted">Tem certeza de que deseja excluir esta categoria? Esta ação não pode ser desfeita.</p>
+    </div>
+
+    <div class="card shadow-sm p-4 border-danger">
+        <dl class="row">
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Nome)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Nome)</dd>
+        </dl>
+    </div>
+
+    <div class="d-flex justify-content-between mt-3">
+        <a asp-action="Index" class="btn btn-secondary rounded-3">
+            <i class="bi bi-arrow-left"></i> Voltar
+        </a>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="CategoriaId" />
+            <button type="submit" class="btn btn-danger rounded-3 fw-bold">
+                <i class="bi bi-trash"></i> Excluir
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model ExemploEF.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes do Cliente";
+}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h1 class="fw-bold">Detalhes do Cliente</h1>
+        <p class="text-muted">Veja as informações do cliente abaixo.</p>
+    </div>
+
+    <div class="card shadow-sm p-4">
+        <dl class="row">
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Nome)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Nome)</dd>
+
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Nascimento)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Nascimento)</dd>
+        </dl>
+    </div>
+
+    <div class="d-flex justify-content-between mt-3">
+        <a asp-action="Index" class="btn btn-secondary rounded-3">
+            <i class="bi bi-arrow-left"></i> Voltar
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model?.ClienteId" class="btn btn-warning rounded-3">
+            <i class="bi bi-pencil"></i> Editar
+        </a>
+    </div>
+</div>
