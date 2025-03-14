@@ -781,3 +781,4 @@ C:\Users\3EM\Desktop\ExemploEF\ExemploEF\obj\Debug\net8.0\refint\ExemploEF.dll
 C:\Users\3EM\Desktop\ExemploEF\ExemploEF\obj\Debug\net8.0\ExemploEF.pdb
 C:\Users\3EM\Desktop\ExemploEF\ExemploEF\obj\Debug\net8.0\ExemploEF.genruntimeconfig.cache
 C:\Users\3EM\Desktop\ExemploEF\ExemploEF\obj\Debug\net8.0\ref\ExemploEF.dll
+C:\Users\3EM\Desktop\ExemploEF\ExemploEF\obj\Debug\net8.0\ExemploEF.sourcelink.json
